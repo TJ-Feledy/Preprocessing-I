@@ -66,6 +66,9 @@ body {
 	background: no-repeat center center fixed;
 	background-image: linear-gradient( to bottom right, black, white);
 }
+
+
+
 //vvvvvvvv VARIABLES vvvvvvvvvvv
 @name-font: 'Arvo', serif;
 @keyframes fontbulger {
@@ -77,15 +80,53 @@ body {
 	}
 }
 // ^^^^^^^^ VARIABLES ^^^^^^^^^
+
+
 // vvvvvvvvvv MIX-INS vvvvvvvvvvv
 .flex-center {display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
+.list-set {
+	h2 {
+		width: 100%;
+		height: auto;
+		text-align: center;
+		font-size: 2.5rem;
+		font-weight: bold;
+		text-decoration: underline;
+		margin-bottom: 1rem;
+		padding: .5rem;
+		background-color: rgba(32, 173, 32, 0.445);
+		border-radius: .5rem;
+	}
+	ul {
+		width: 100%;
+		height: auto;
+		list-style: square;
+		font-size: 1.8rem;
+		font-weight: bold;
+		padding: 2rem;
+		padding-right: .5rem;
+	}
+}
+.bubble-set {
+	background-color: rgba(255, 255, 255, 0.185);
+	.flex-center();
+	flex-direction: column;
+	width: 100%;
+	padding: 1rem;
+	margin: 2rem;
+	border-radius: 2rem;
+	.list-set();
+}
 // ^^^^^^^^^^ MIX-INS ^^^^^^^^^^^
+
+
+
 .container {
 	.flex-center();
+	justify-content: space-around;
 }
 
 .intro-div {
@@ -97,12 +138,14 @@ body {
 	background-color: rgba(32, 173, 32, 0.445);
 	margin: 2rem;
 	padding: 2rem;
+	border-radius: 4rem;
 	h1 {
 		font-size: 2.5rem;
 		font-family: @name-font;
 		text-decoration-color: white;
 		text-decoration-line: overline;
 		margin: 1rem;
+		padding: 0 3rem;
 	}
 	.intro-img {
 		width: 90%;
@@ -120,8 +163,14 @@ body {
 		margin-bottom: 2rem;
 	}
 	.career-title {
+		width: 70%;
+		text-align: center;
 		margin-top: 2rem;
 		text-decoration-line: underline;
-		animation: fontbulger 9s infinite;
+		animation: fontbulger 8s infinite;
 	}
+}
+
+.education-div {
+	.bubble-set();
 }
