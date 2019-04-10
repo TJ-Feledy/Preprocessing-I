@@ -63,6 +63,8 @@ html {
 
 body {
 	.flex-center();
+	width: 100%;
+	margin: 0 auto;
 	background: no-repeat center center fixed;
 	background-image: linear-gradient( to bottom right, black, white);
 }
@@ -109,6 +111,9 @@ body {
 		padding: 2rem;
 		padding-right: .5rem;
 	}
+	li {
+		margin-bottom: 1rem;
+	}
 }
 .bubble-set {
 	background-color: rgba(255, 255, 255, 0.185);
@@ -125,7 +130,9 @@ body {
 
 
 .container {
-	.flex-center();
+	width: 100%;
+	height: auto;
+	display: flex;
 	justify-content: space-around;
 	align-items: flex-start;
 
@@ -171,17 +178,12 @@ body {
 		}
 	}
 	.left-div {
-		width: 100%;
+		width: 50%;
 		height: auto;
 		flex-direction: column;
+		margin-left: 2rem;
 		.flex-center;
 	}
-		.summary-div {
-			.bubble-set();
-		}
-		.education-div {
-			.bubble-set();
-		}
 		.top-nav {
 			.flex-center;
 			justify-content: space-between;
@@ -196,6 +198,34 @@ body {
 			a:hover {
 				background: gray;
 				border-radius: 1rem;
+			}
+		}
+		.summary-div {
+			.bubble-set();
+		}
+		.education-div {
+			.bubble-set();
+		}
+		.skills-div {
+			.bubble-set();
+		}
+		.contacts-div{
+			.bubble-set();
+			.contact-info-container {
+				width: 100%;
+				height: auto;
+				font-size: 1.5rem;
+				display: flex;
+				justify-content: space-evenly;
+			}
+		.address-title-div {
+			font-weight: bold;
+		}
+		.address {
+				display: flex;
+				flex-direction: column;
+				height: 5rem;
+				// width: 50rem;
 			}
 		}
 }
