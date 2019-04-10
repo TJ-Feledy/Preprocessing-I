@@ -217,8 +217,9 @@ body {
   justify-content: center;
   align-items: center;
   justify-content: space-around;
+  align-items: flex-start;
 }
-.intro-div {
+.container .intro-div {
   width: 50%;
   height: auto;
   display: flex;
@@ -230,7 +231,7 @@ body {
   padding: 2rem;
   border-radius: 4rem;
 }
-.intro-div h1 {
+.container .intro-div h1 {
   font-size: 2.5rem;
   font-family: 'Arvo', serif;
   text-decoration-color: white;
@@ -238,29 +239,36 @@ body {
   margin: 1rem;
   padding: 0 3rem;
 }
-.intro-div .intro-img {
+.container .intro-div .intro-img {
   width: 90%;
   height: auto;
   border-radius: 6rem;
 }
-.intro-div .first-name {
+.container .intro-div .first-name {
   align-self: flex-start;
 }
-.intro-div .middle-name {
+.container .intro-div .middle-name {
   align-self: center;
 }
-.intro-div .last-name {
+.container .intro-div .last-name {
   align-self: flex-end;
   margin-bottom: 2rem;
 }
-.intro-div .career-title {
+.container .intro-div .career-title {
   width: 70%;
   text-align: center;
   margin-top: 2rem;
   text-decoration-line: underline;
-  animation: fontbulger 8s infinite;
 }
-.education-div {
+.container .left-div {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .summary-div {
   background-color: rgba(255, 255, 255, 0.185);
   display: flex;
   justify-content: center;
@@ -271,7 +279,7 @@ body {
   margin: 2rem;
   border-radius: 2rem;
 }
-.education-div h2 {
+.container .summary-div h2 {
   width: 100%;
   height: auto;
   text-align: center;
@@ -283,7 +291,7 @@ body {
   background-color: rgba(32, 173, 32, 0.445);
   border-radius: 0.5rem;
 }
-.education-div ul {
+.container .summary-div ul {
   width: 100%;
   height: auto;
   list-style: square;
@@ -291,4 +299,54 @@ body {
   font-weight: bold;
   padding: 2rem;
   padding-right: 0.5rem;
+}
+.container .education-div {
+  background-color: rgba(255, 255, 255, 0.185);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 2rem;
+}
+.container .education-div h2 {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(32, 173, 32, 0.445);
+  border-radius: 0.5rem;
+}
+.container .education-div ul {
+  width: 100%;
+  height: auto;
+  list-style: square;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 2rem;
+  padding-right: 0.5rem;
+}
+.container .top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 2rem;
+  margin: 0 0 5rem;
+  padding: 2rem;
+}
+.container .top-nav a {
+  color: white;
+  padding: 1rem;
+}
+.container .top-nav a:hover {
+  background: gray;
+  border-radius: 1rem;
 }

@@ -127,50 +127,75 @@ body {
 .container {
 	.flex-center();
 	justify-content: space-around;
-}
+	align-items: flex-start;
 
-.intro-div {
+	.intro-div {
 
-	width: 50%;
-	height: auto;
-	.flex-center();
-	flex-direction: column;
-	background-color: rgba(32, 173, 32, 0.445);
-	margin: 2rem;
-	padding: 2rem;
-	border-radius: 4rem;
-	h1 {
-		font-size: 2.5rem;
-		font-family: @name-font;
-		text-decoration-color: white;
-		text-decoration-line: overline;
-		margin: 1rem;
-		padding: 0 3rem;
-	}
-	.intro-img {
-		width: 90%;
+		width: 50%;
 		height: auto;
-		border-radius: 6rem;
-	}
-	.first-name {
-		align-self: flex-start;
+		.flex-center();
+		flex-direction: column;
+		background-color: rgba(32, 173, 32, 0.445);
+		margin: 2rem;
+		padding: 2rem;
+		border-radius: 4rem;
+		h1 {
+			font-size: 2.5rem;
+			font-family: @name-font;
+			text-decoration-color: white;
+			text-decoration-line: overline;
+			margin: 1rem;
+			padding: 0 3rem;
 		}
-	.middle-name {
-		align-self: center;
+		.intro-img {
+			width: 90%;
+			height: auto;
+			border-radius: 6rem;
+		}
+		.first-name {
+			align-self: flex-start;
+			}
+		.middle-name {
+			align-self: center;
+		}
+		.last-name {
+			align-self: flex-end;
+			margin-bottom: 2rem;
+		}
+		.career-title {
+			width: 70%;
+			text-align: center;
+			margin-top: 2rem;
+			text-decoration-line: underline;
+			// animation: fontbulger 8s infinite;
+		}
 	}
-	.last-name {
-		align-self: flex-end;
-		margin-bottom: 2rem;
+	.left-div {
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+		.flex-center;
 	}
-	.career-title {
-		width: 70%;
-		text-align: center;
-		margin-top: 2rem;
-		text-decoration-line: underline;
-		animation: fontbulger 8s infinite;
-	}
-}
-
-.education-div {
-	.bubble-set();
+		.summary-div {
+			.bubble-set();
+		}
+		.education-div {
+			.bubble-set();
+		}
+		.top-nav {
+			.flex-center;
+			justify-content: space-between;
+			width: 100%;
+			font-size: 2rem;
+			margin: 0 0 5rem;
+			padding: 2rem;
+			a {
+				color: white;
+				padding: 1rem;
+			}
+			a:hover {
+				background: gray;
+				border-radius: 1rem;
+			}
+		}
 }
