@@ -143,6 +143,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto;
   margin: 0 auto;
   background: no-repeat center center fixed;
   background-image: linear-gradient(to bottom right, black, white);
@@ -192,6 +193,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: auto;
   padding: 1rem;
   margin: 2rem;
   border-radius: 2rem;
@@ -227,6 +229,14 @@ body {
   justify-content: space-around;
   align-items: flex-start;
 }
+@media (max-width: 500px) {
+  .container {
+    justify-content: space-between;
+    margin-left: -6em;
+    margin-right: 1em;
+    width: 90%;
+  }
+}
 .container .intro-div {
   width: 50%;
   height: auto;
@@ -238,6 +248,13 @@ body {
   margin: 2rem;
   padding: 2rem;
   border-radius: 4rem;
+}
+@media (max-width: 500px) {
+  .container .intro-div {
+    margin-left: 24.3em;
+    margin-top: 0.5em;
+    position: fixed;
+  }
 }
 .container .intro-div h1 {
   font-size: 2.5rem;
@@ -305,6 +322,7 @@ body {
     width: auto;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 1rem;
   }
 }
 .container .summary-div {
@@ -314,6 +332,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: auto;
   padding: 1rem;
   margin: 2rem;
   border-radius: 2rem;
@@ -349,6 +368,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: auto;
   padding: 1rem;
   margin: 2rem;
   border-radius: 2rem;
@@ -384,6 +404,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: auto;
   padding: 1rem;
   margin: 2rem;
   border-radius: 2rem;
@@ -419,6 +440,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: auto;
   padding: 1rem;
   margin: 2rem;
   border-radius: 2rem;
@@ -453,6 +475,11 @@ body {
   font-size: 1.5rem;
   display: flex;
   justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .container .contacts-div .contact-info-container {
+    flex-flow: column wrap;
+  }
 }
 .container .contacts-div .address-title-div {
   font-weight: bold;
