@@ -183,6 +183,9 @@ body {
 		flex-direction: column;
 		margin-left: 2rem;
 		.flex-center;
+		@media (max-width: 500px) {
+			flex-wrap: column wrap;
+		}
 	}
 		.top-nav {
 			.flex-center;
@@ -198,6 +201,11 @@ body {
 			a:hover {
 				background: gray;
 				border-radius: 1rem;
+			}
+			@media (max-width: 500px) {
+				width: auto;
+				flex-wrap: wrap;
+				justify-content: center;
 			}
 		}
 		.summary-div {

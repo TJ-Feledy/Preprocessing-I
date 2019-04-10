@@ -277,6 +277,11 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .container .left-div {
+    flex-wrap: column wrap;
+  }
+}
 .container .top-nav {
   display: flex;
   justify-content: center;
@@ -294,6 +299,13 @@ body {
 .container .top-nav a:hover {
   background: gray;
   border-radius: 1rem;
+}
+@media (max-width: 500px) {
+  .container .top-nav {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .container .summary-div {
   background-color: rgba(255, 255, 255, 0.185);
