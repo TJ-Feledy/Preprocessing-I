@@ -54,6 +54,205 @@ table {
 }
 
 html, body {
-    height: 100%;
+    height: auto;
+}
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
 }
 
+body {
+	.flex-center();
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background: no-repeat center center fixed;
+	background-image: linear-gradient( to bottom right, black, white);
+}
+
+
+
+//vvvvvvvv VARIABLES vvvvvvvvvvv
+@name-font: 'Arvo', serif;
+@keyframes fontbulger {
+	0%, 100% {
+		font-size: 2.5rem;
+	}
+	50% {
+		font-size: 2.3rem;
+	}
+}
+// ^^^^^^^^ VARIABLES ^^^^^^^^^
+
+
+// vvvvvvvvvv MIX-INS vvvvvvvvvvv
+.flex-center {display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.list-set {
+	h2 {
+		width: 100%;
+		height: auto;
+		text-align: center;
+		font-size: 2.5rem;
+		font-weight: bold;
+		text-decoration: underline;
+		margin-bottom: 1rem;
+		padding: .5rem;
+		background-color: rgba(32, 173, 32, 0.445);
+		border-radius: .5rem;
+	}
+	ul {
+		width: 100%;
+		height: auto;
+		list-style: square;
+		font-size: 1.8rem;
+		font-weight: bold;
+		padding: 2rem;
+		padding-right: .5rem;
+	}
+	li {
+		margin-bottom: 1rem;
+	}
+}
+.bubble-set {
+	background-color: rgba(255, 255, 255, 0.185);
+	.flex-center();
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	padding: 1rem;
+	margin: 2rem;
+	border-radius: 2rem;
+	.list-set();
+}
+// ^^^^^^^^^^ MIX-INS ^^^^^^^^^^^
+
+
+
+.container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	@media(max-width:500px) {
+		justify-content: space-between;
+		margin-left: -6em;
+		margin-right: 1em;
+		width: 90%;
+	}
+
+	.intro-div {
+
+		width: 50%;
+		height: auto;
+		.flex-center();
+		flex-direction: column;
+		background-color: rgba(32, 173, 32, 0.445);
+		margin: 2rem;
+		padding: 2rem;
+		border-radius: 4rem;
+		@media(max-width:500px) {
+			margin-left: 24.3em;
+			margin-top: .5em;
+			position: fixed;
+		}
+		h1 {
+			font-size: 2.5rem;
+			font-family: @name-font;
+			text-decoration-color: white;
+			text-decoration-line: overline;
+			margin: 1rem;
+			padding: 0 3rem;
+
+		}
+		.intro-img {
+			width: 90%;
+			height: auto;
+			border-radius: 6rem;
+		}
+		.first-name {
+			align-self: flex-start;
+			}
+		.middle-name {
+			align-self: center;
+		}
+		.last-name {
+			align-self: flex-end;
+			margin-bottom: 2rem;
+		}
+		.career-title {
+			width: 70%;
+			text-align: center;
+			margin-top: 2rem;
+			text-decoration-line: underline;
+			// animation: fontbulger 8s infinite;
+		}
+	}
+	.left-div {
+		width: 50%;
+		height: auto;
+		flex-direction: column;
+		margin-left: 2rem;
+		.flex-center;
+		@media (max-width: 500px) {
+			flex-wrap: column wrap;
+		}
+	}
+		.top-nav {
+			.flex-center;
+			justify-content: space-between;
+			width: 100%;
+			font-size: 2rem;
+			margin: 0 0 5rem;
+			padding: 2rem;
+			a {
+				color: white;
+				padding: 1rem;
+			}
+			a:hover {
+				background: gray;
+				border-radius: 1rem;
+			}
+			@media (max-width: 500px) {
+				width: auto;
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-bottom: 1rem;
+			}
+		}
+		.summary-div {
+			.bubble-set();
+		}
+		.education-div {
+			.bubble-set();
+		}
+		.skills-div {
+			.bubble-set();
+		}
+		.contacts-div{
+			.bubble-set();
+			.contact-info-container {
+				width: 100%;
+				height: auto;
+				font-size: 1.5rem;
+				display: flex;
+				// 
+				justify-content: space-evenly;
+				@media(max-width: 500px) {
+					flex-flow: column wrap;
+				}
+			}
+		.address-title-div {
+			font-weight: bold;
+		}
+		.address {
+				display: flex;
+				flex-direction: column;
+				height: 5rem;
+				// width: 50rem;
+			}
+		}
+}
